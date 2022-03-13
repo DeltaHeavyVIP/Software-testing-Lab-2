@@ -2,6 +2,10 @@ package lab_2.trig;
 
 import lab_2.AbstractFunction;
 
+import static java.lang.Double.*;
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
+
 public class TrigFunction extends AbstractFunction {
 
     private Sin sin;
@@ -22,18 +26,27 @@ public class TrigFunction extends AbstractFunction {
     }
 
     /*
-    ((((((((((((cos(x) - tan(x)) ^ 2) * tan(x)) / (cos(x) ^ 2)) / ((tan(x) + cot(x)) + (tan(x) ^ 2))) / (sec(x) ^ 2)) - (csc(x) - sec(x))) - sin(x)) + (tan(x) + (cot(x) * cos(x)))) - ((sin(x) - (sec(x) * ((csc(x) + (sin(x) + cos(x))) + sin(x)))) + ((csc(x) + tan(x)) - sec(x)))) - ((sec(x) * ((sec(x) - ((sin(x) - sin(x)) + cot(x))) ^ 3)) / ((csc(x) ^ 2) + sin(x)))) ^ 2)
+    ((((((((((((cos(x) - tanResult(x)) ^ 2) * tanResult(x)) / (cosResult(x) ^ 2)) / ((tanResult(x) + cotResult(x)) + (tanResult(x) ^ 2))) / (secResult(x) ^ 2)) - (cscResult(x) - secResult(x))) - sinResult(x)) + (tanResult(x) + (cotResult(x) * cosResult(x)))) - ((sinResult(x) - (secResult(x) * ((cscResult(x) + (sinResult(x) + cosResult(x))) + sinResult(x)))) + ((cscResult(x) + tanResult(x)) - secResult(x)))) - ((secResult(x) * ((secResult(x) - ((sinResult(x) - sinResult(x)) + cotResult(x))) ^ 3)) / ((cscResult(x) ^ 2) + sinResult(x)))) ^ 2)
      */
     @Override
     public Double calculate(Double x) {
-        double resultSin = sin.calculate(x);
-        double resultCos = cos.calculate(x);
-        double resultTan = tan.calculate(x);
-        double resultCot = cot.calculate(x);
-        double resultSec = sec.calculate(x);
-        double resultCsc = csc.calculate(x);
+        double sinResult = sin.calculate(x);
+        double cosResult = cos.calculate(x);
+        double tanResult = tan.calculate(x);
+        double cotResult = cot.calculate(x);
+        double secResult = sec.calculate(x);
+        double cscResult = csc.calculate(x);
 
-        double result = 0.0;
-        return result;
+        return pow((((((((((pow((cosResult - tanResult), 2) * tanResult) / pow(cosResult, 2)) / ((tanResult + cotResult) + pow(tanResult, 2))) / pow(secResult, 2)) - (cscResult - secResult)) - sinResult) + (tanResult + (cotResult * cosResult))) - ((sinResult - (secResult * ((cscResult + (sinResult + cosResult)) + sinResult))) + ((cscResult + tanResult) - secResult))) - ((secResult * pow((secResult - ((sinResult - sinResult) + cotResult)), 3)) / (pow(cscResult, 2) + sinResult))), 2);
+    }
+
+    public Double checkX(Double x) {
+        if (isNaN(x) || isInfinite(x)) {
+            return NaN;
+        }
+        if (x > 0) {
+            throw new ArithmeticException("Х должен быть <=0");
+        }
+        return x % (2 * PI);
     }
 }

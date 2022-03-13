@@ -1,11 +1,8 @@
 package lab_2.trig;
 
-import lab_2.AbstractFunction;
-
-import static java.lang.Double.*;
 import static java.lang.Math.*;
 
-public class Sin extends AbstractFunction {
+public class Sin extends TrigFunction {
 
     public Sin(Double e) {
         super(e);
@@ -26,5 +23,16 @@ public class Sin extends AbstractFunction {
             n++;
         }
         return resultSin;
+    }
+
+    public Double getFactorial(int n) {
+        double ret;
+
+        if (n == 0) {
+            return 1.0;
+        } else {
+            ret = n * getFactorial(n - 1);
+        }
+        return ret;
     }
 }
