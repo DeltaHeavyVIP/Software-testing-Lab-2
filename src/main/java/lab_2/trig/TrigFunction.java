@@ -8,21 +8,8 @@ import static java.lang.Math.pow;
 
 public class TrigFunction extends AbstractFunction {
 
-    private Sin sin;
-    private Cos cos;
-    private Tan tan;
-    private Cot cot;
-    private Sec sec;
-    private Csc csc;
-
     public TrigFunction(Double e) {
         super(e);
-        this.sin = new Sin(e);
-        this.cos = new Cos(e);
-        this.tan = new Tan(e);
-        this.cot = new Cot(e);
-        this.sec = new Sec(e);
-        this.csc = new Csc(e);
     }
 
     /*
@@ -30,12 +17,12 @@ public class TrigFunction extends AbstractFunction {
      */
     @Override
     public Double calculate(Double x) {
-        double sinResult = sin.calculate(x);
-        double cosResult = cos.calculate(x);
-        double tanResult = tan.calculate(x);
-        double cotResult = cot.calculate(x);
-        double secResult = sec.calculate(x);
-        double cscResult = csc.calculate(x);
+        double sinResult = new Sin(getE()).calculate(x);
+        double cosResult = new Cos(getE()).calculate(x);
+        double tanResult = new Tan(getE()).calculate(x);
+        double cotResult = new Cot(getE()).calculate(x);
+        double secResult = new Sec(getE()).calculate(x);
+        double cscResult = new Csc(getE()).calculate(x);
 
         return pow((((((((((pow((cosResult - tanResult), 2) * tanResult) / pow(cosResult, 2)) / ((tanResult + cotResult) + pow(tanResult, 2))) / pow(secResult, 2)) - (cscResult - secResult)) - sinResult) + (tanResult + (cotResult * cosResult))) - ((sinResult - (secResult * ((cscResult + (sinResult + cosResult)) + sinResult))) + ((cscResult + tanResult) - secResult))) - ((secResult * pow((secResult - ((sinResult - sinResult) + cotResult)), 3)) / (pow(cscResult, 2) + sinResult))), 2);
     }

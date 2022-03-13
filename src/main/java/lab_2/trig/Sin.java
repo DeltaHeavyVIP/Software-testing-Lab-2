@@ -35,23 +35,20 @@ public class Sin extends TrigFunction {
             return 0.0;
         }
 
-        int n = 0;
+        int n = 1;
         double resultSin = 0;
-        while (abs((pow(-1, n - 1) / getFactorial(2 * n - 1)) * pow(x, 2 * n - 1)) > getE()) {
-            resultSin += (pow(-1, n - 1) / getFactorial(2 * n - 1)) * pow(x, 2 * n - 1);
+        while (Math.abs((Math.pow(-1, n - 1) / getFactorial(2 * n - 1)) * Math.pow(x, 2 * n - 1)) > getE()) {
+            resultSin += (Math.pow(-1, n - 1) / getFactorial(2 * n - 1)) * Math.pow(x, 2 * n - 1);
             n++;
         }
         return resultSin;
     }
 
-    public Double getFactorial(int n) {
-        double ret;
-
-        if (n == 0) {
-            return 1.0;
-        } else {
-            ret = n * getFactorial(n - 1);
+    public long getFactorial(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
         }
-        return ret;
+        return result;
     }
 }
