@@ -4,13 +4,12 @@ import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.POSITIVE_INFINITY;
 
 public class Tan extends TrigFunction {
-    private Sin sin;
-    private Cos cos;
+    private final Sin sin;
+    private final Cos cos;
 
-    public Tan(Double e) {
-        super(e);
-        this.sin = new Sin(e);
-        this.cos = new Cos(e);
+    public Tan() {
+        this.sin = new Sin();
+        this.cos = new Cos();
     }
 
     @Override

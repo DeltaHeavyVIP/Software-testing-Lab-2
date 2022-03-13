@@ -5,13 +5,12 @@ import static java.lang.Double.POSITIVE_INFINITY;
 
 public class Cot extends TrigFunction {
 
-    private Sin sin;
-    private Cos cos;
+    private final Sin sin;
+    private final Cos cos;
 
-    public Cot(Double e) {
-        super(e);
-        this.sin = new Sin(e);
-        this.cos = new Cos(e);
+    public Cot() {
+        this.sin = new Sin();
+        this.cos = new Cos();
     }
 
     @Override

@@ -22,7 +22,7 @@ public abstract class AbstractFunction {
         return x;
     }
 
-    public static Double getFactorial(int n) {
+    public Double getFactorial(int n) {
         double ret;
 
         if (n == 0) {

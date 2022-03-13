@@ -5,11 +5,10 @@ import static java.lang.Double.POSITIVE_INFINITY;
 
 public class Csc extends TrigFunction {
 
-    private Sin sin;
+    private final Sin sin;
 
-    public Csc(Double e) {
-        super(e);
-        this.sin = new Sin(e);
+    public Csc() {
+        this.sin = new Sin();
     }
 
     @Override

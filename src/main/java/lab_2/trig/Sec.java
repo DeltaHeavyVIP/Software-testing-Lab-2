@@ -5,11 +5,10 @@ import static java.lang.Double.POSITIVE_INFINITY;
 
 public class Sec extends TrigFunction {
 
-    private Cos cos;
+    private final Cos cos;
 
-    public Sec(Double e) {
-        super(e);
-        this.cos = new Cos(e);
+    public Sec() {
+        this.cos = new Cos();
     }
 
     @Override

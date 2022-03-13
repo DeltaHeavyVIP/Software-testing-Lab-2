@@ -4,11 +4,10 @@ import static java.lang.Math.*;
 
 public class Cos extends TrigFunction {
 
-    private Sin sin;
+    private final Sin sin;
 
-    public Cos(Double e) {
-        super(e);
-        this.sin = new Sin(e);
+    public Cos() {
+        this.sin = new Sin();
     }
 
     @Override
