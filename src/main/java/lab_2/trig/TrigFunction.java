@@ -2,6 +2,7 @@ package lab_2.trig;
 
 import lab_2.AbstractFunction;
 
+import static java.lang.Double.*;
 import static java.lang.Math.PI;
 
 public abstract class TrigFunction extends AbstractFunction {
@@ -21,7 +22,7 @@ public abstract class TrigFunction extends AbstractFunction {
             double secResult = new Sec(getE()).calculate(x);
             double cscResult = new Csc(getE()).calculate(x);
 
-            return Math.pow((((((((((Math.pow((cosResult - tanResult), 2) * tanResult) / Math.pow(cosResult, 2)) / ((tanResult + cotResult) + Math.pow(tanResult, 2))) / Math.pow(secResult, 2)) - (cscResult - secResult)) - sinResult) + (tanResult + (cotResult * cosResult))) - ((sinResult - (secResult * ((cscResult + (sinResult + cosResult)) + sinResult))) + ((cscResult + tanResult) - secResult))) - ((secResult * Math.pow((secResult - ((sinResult - sinResult) + cotResult)), 3)) / (pow(cscResult, 2) + sinResult))), 2);
+            return Math.pow((((((((((Math.pow((cosResult - tanResult), 2) * tanResult) / Math.pow(cosResult, 2)) / ((tanResult + cotResult) + Math.pow(tanResult, 2))) / Math.pow(secResult, 2)) - (cscResult - secResult)) - sinResult) + (tanResult + (cotResult * cosResult))) - ((sinResult - (secResult * ((cscResult + (sinResult + cosResult)) + sinResult))) + ((cscResult + tanResult) - secResult))) - ((secResult * Math.pow((secResult - ((sinResult - sinResult) + cotResult)), 3)) / (Math.pow(cscResult, 2) + sinResult))), 2);
         }
 
     public Double checkX(Double x) {
