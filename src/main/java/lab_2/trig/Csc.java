@@ -1,11 +1,9 @@
 package lab_2.trig;
 
-import lab_2.AbstractFunction;
-
-import static java.lang.Double.*;
 import static java.lang.Double.NEGATIVE_INFINITY;
+import static java.lang.Double.POSITIVE_INFINITY;
 
-public class Csc extends AbstractFunction {
+public class Csc extends TrigFunction {
 
     private Sin sin;
 

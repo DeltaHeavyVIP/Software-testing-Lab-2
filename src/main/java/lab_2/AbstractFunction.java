@@ -4,9 +4,14 @@ import lombok.Data;
 
 import static java.lang.Double.*;
 import static java.lang.Math.PI;
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
 public abstract class AbstractFunction {
+
+    private Map<Double, Double> mocks = new HashMap<>();
+    private Double e;
 
     public abstract Double calculate(Double x);
 

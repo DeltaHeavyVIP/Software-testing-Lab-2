@@ -1,11 +1,8 @@
 package lab_2.trig;
 
-import lab_2.AbstractFunction;
-
-import static java.lang.Double.*;
 import static java.lang.Math.*;
 
-public class Cos extends AbstractFunction {
+public class Cos extends TrigFunction {
 
     private Sin sin;
 
