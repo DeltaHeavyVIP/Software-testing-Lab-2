@@ -1,13 +1,11 @@
 package trig;
 
 import lab_2.trig.*;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static java.lang.Math.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -21,7 +19,7 @@ public class TestTrig {
     private final Cot cot;
     private final Sec sec;
     private final Csc csc;
-    private final Calculator calculator;
+    private final TrigCalculator trigCalculator;
     private final double accuracy = 0.1;
 
 
@@ -32,7 +30,7 @@ public class TestTrig {
         this.cot = new Cot();
         this.sec = new Sec();
         this.csc = new Csc();
-        this.calculator = new Calculator(sin, cos, tan, cot, sec, csc);
+        this.trigCalculator = new TrigCalculator(sin, cos, tan, cot, sec, csc);
     }
 
     @ParameterizedTest

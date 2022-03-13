@@ -13,7 +13,7 @@ public class Main {
         var cot = new Cot();
         var sec = new Sec();
         var csc = new Csc();
-        var calculator = new Calculator(sin, cos, tan, cot, sec, csc);
+        var calculator = new TrigCalculator(sin, cos, tan, cot, sec, csc);
         System.out.println(calculator.calculate(x));
     }
 }
