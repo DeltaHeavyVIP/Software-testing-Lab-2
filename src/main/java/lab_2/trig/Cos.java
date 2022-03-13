@@ -4,19 +4,6 @@ import static java.lang.Math.*;
 
 public class Cos extends TrigFunction {
 
-    {
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-        getMocks().put();
-    }
-
     private Sin sin;
 
     public Cos(Double e) {
