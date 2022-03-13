@@ -37,14 +37,6 @@ public class TestTrig {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/sinData.csv")
-    @DisplayName("est(x) test")
-    void est(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        System.out.println(divisible + ", " + divider + ", " + (pow((((((((((pow((cos(x) - tan(x)), 2) * tan(x)) / pow(cos(x), 2)) / ((tan(x) + (1 / tan(x))) + pow(tan(x), 2))) / pow((1 / cos(x)), 2)) - ((1 / sin(x)) - (1 / cos(x)))) - sin(x)) + (tan(x) + ((1 / tan(x)) * cos(x)))) - ((sin(x) - ((1 / cos(x)) * (((1 / sin(x)) + (sin(x) + cos(x))) + sin(x)))) + (((1 / sin(x)) + tan(x)) - (1 / cos(x))))) - (((1 / cos(x)) * pow(((1 / cos(x)) - ((sin(x) - sin(x)) + (1 / tan(x)))), 3)) / (pow((1 / sin(x)), 2) + sin(x)))), 2)));
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(resources = "/inputTrig/sinData.csv")
     @DisplayName("sin(x) test")
     void sinTest(Double divisible, Double divider, Double trueResult) {
         double x = divisible * Math.PI / divider;
