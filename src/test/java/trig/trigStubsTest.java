@@ -2,6 +2,7 @@ package trig;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import lab_2.AbstractFunction;
 import lab_2.trig.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -25,7 +26,7 @@ public class trigStubsTest {
     private static Cot cot = mock(Cot.class);
     private static Sec sec = mock(Sec.class);
     private static Csc csc = mock(Csc.class);
-    private static TrigCalculator trigCalculator = null;
+    private static TrigCalculator trigCalculator = mock(TrigCalculator.class);
 
     private final double accuracy = 0.1;
 
@@ -37,10 +38,10 @@ public class trigStubsTest {
         fillMock(cot, "src/test/resources/inputTrig/cotData.csv");
         fillMock(sec, "src/test/resources/inputTrig/secData.csv");
         fillMock(csc, "src/test/resources/inputTrig/cscData.csv");
-        trigCalculator = new TrigCalculator(sin, cos, tan, cot, sec, csc);
+        fillMock(trigCalculator, "src/test/resources/inputTrig/funcData.csv");
     }
 
-    private static void fillMock(TrigFunction tf, String tableName) throws IOException, CsvException {
+    private static void fillMock(AbstractFunction tf, String tableName) throws IOException, CsvException {
         try (CSVReader csvReader = new CSVReader(new FileReader(tableName))) {
             List<String[]> records = csvReader.readAll();
             for (String[] record : records) {
@@ -112,6 +113,19 @@ public class trigStubsTest {
         try {
             double x = divisible * PI / divider;
             double result = csc.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/inputTrig/funcData.csv")
+    @DisplayName("func(x) test")
+    void funcTest(Double divisible, Double divider, Double trueResult) {
+        try {
+            double x = divisible * PI / divider;
+            double result = trigCalculator.calculate(x);
             assertEquals(trueResult, result, accuracy);
         } catch (ArithmeticException e) {
             assertEquals("Х should be <=0", e.getMessage());

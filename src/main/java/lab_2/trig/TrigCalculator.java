@@ -1,6 +1,8 @@
 package lab_2.trig;
 
-public class TrigCalculator {
+import lab_2.AbstractFunction;
+
+public class TrigCalculator extends AbstractFunction {
     private final Sin sin;
     private final Cos cos;
     private final Tan tan;
