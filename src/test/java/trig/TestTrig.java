@@ -35,54 +35,79 @@ public class TestTrig {
     @CsvFileSource(resources = "/inputTrig/sinData.csv")
     @DisplayName("sin(x) test")
     void sinTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = sin.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = sin.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/cosData.csv")
     @DisplayName("cos(x) test")
     void cosTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = cos.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = cos.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/tanData.csv")
     @DisplayName("tan(x) test")
     void tanTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = tan.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = tan.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/cotData.csv")
     @DisplayName("cot(x) test")
     void cotTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = cot.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = cot.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/secData.csv")
     @DisplayName("sec(x) test")
     void secTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = sec.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = sec.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/cscData.csv")
     @DisplayName("csc(x) test")
     void cscTest(Double divisible, Double divider, Double trueResult) {
-        double x = divisible * Math.PI / divider;
-        double result = csc.calculate(x);
-        assertEquals(trueResult, result, accuracy);
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = csc.calculate(x);
+            assertEquals(trueResult, result, accuracy);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
     }
+
 
 }
