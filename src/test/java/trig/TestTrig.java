@@ -128,10 +128,9 @@ public class TestTrig {
     @ParameterizedTest
     @CsvFileSource(resources = "/inputTrig/funcData.csv")
     @DisplayName("func(x) test")
-    void funcTest(Double divisible, Double divider, Double trueResult) {
+    void funcTest(Double x, Double trueResult) {
         try {
             csvLogger.setFilePath("src/test/resources/results/func.csv");
-            double x = divisible * Math.PI / divider;
             double result = trigCalculator.calculate(x);
             csvLogger.logger(x,result);
             assertEquals(trueResult, result, 100);
