@@ -19,7 +19,7 @@ public class TestTrig {
     private final Cot cot;
     private final Sec sec;
     private final Csc csc;
-    private final Calculator calculator;
+    private final TrigCalculator trigCalculator;
     private final double accuracy = 0.1;
 
 
@@ -30,7 +30,7 @@ public class TestTrig {
         this.cot = new Cot();
         this.sec = new Sec();
         this.csc = new Csc();
-        this.calculator = new Calculator(sin, cos, tan, cot, sec, csc);
+        this.trigCalculator = new TrigCalculator(sin, cos, tan, cot, sec, csc);
     }
 
     @ParameterizedTest

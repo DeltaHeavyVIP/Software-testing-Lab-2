@@ -1,6 +1,6 @@
 package lab_2.trig;
 
-public class Calculator {
+public class TrigCalculator {
     private final Sin sin;
     private final Cos cos;
     private final Tan tan;
@@ -8,7 +8,7 @@ public class Calculator {
     private final Sec sec;
     private final Csc csc;
 
-    public Calculator(Sin sin, Cos cos, Tan tan, Cot cot, Sec sec, Csc csc) {
+    public TrigCalculator(Sin sin, Cos cos, Tan tan, Cot cot, Sec sec, Csc csc) {
         this.sin = sin;
         this.cos = cos;
         this.tan = tan;
