@@ -45,8 +45,8 @@ public class TrigStubsTest {
         try (CSVReader csvReader = new CSVReader(new FileReader(tableName))) {
             List<String[]> records = csvReader.readAll();
             for (String[] record : records) {
-                final double x = Double.parseDouble(record[0]) * PI / Double.parseDouble(record[1]);
-                final double y = Double.parseDouble(record[2]);
+                final double x = Double.parseDouble(record[0]);
+                final double y = Double.parseDouble(record[1]);
                 when(tf.calculate(x)).thenReturn(y);
             }
         } catch (IOException | CsvException exp) {
