@@ -10,6 +10,6 @@ public class Log3 extends LogFunction {
     @Override
     public Double calculate(Double x) {
         x = checkX(x);
-        return ln.calculate(x) / ln.calculate(3.);
+        return ln.calculate(x) / 1.09861228867;
     }
 }
