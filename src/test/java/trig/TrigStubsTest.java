@@ -20,13 +20,13 @@ import static org.mockito.Mockito.when;
 
 public class TrigStubsTest {
 
-    private static Sin sin = mock(Sin.class);
-    private static Cos cos = mock(Cos.class);
-    private static Tan tan = mock(Tan.class);
-    private static Cot cot = mock(Cot.class);
-    private static Sec sec = mock(Sec.class);
-    private static Csc csc = mock(Csc.class);
-    private static TrigCalculator trigCalculator = mock(TrigCalculator.class);
+    public static Sin sin = mock(Sin.class);
+    public static Cos cos = mock(Cos.class);
+    public static Tan tan = mock(Tan.class);
+    public static Cot cot = mock(Cot.class);
+    public static Sec sec = mock(Sec.class);
+    public static Csc csc = mock(Csc.class);
+    public static TrigCalculator trigCalculator = mock(TrigCalculator.class);
 
     private final double accuracy = 0.1;
 

@@ -22,7 +22,7 @@ public class LogStubsTest {
     private static final Log3 log3 = mock(Log3.class);
     private static final Log5 log5 = mock(Log5.class);
     private static final Log10 log10 = mock(Log10.class);
-    private static LogCalculator logCalculator = null;
+    public static LogCalculator logCalculator = null;
 
     private final double accuracy = 0.1;
 
