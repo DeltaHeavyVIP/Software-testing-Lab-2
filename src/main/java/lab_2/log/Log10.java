@@ -10,6 +10,6 @@ public class Log10 extends LogFunction{
     public Double calculate(Double x) {
         x = checkX(x);
 
-        return ln.calculate(x)/ ln.calculate(10.);
+        return ln.calculate(x)/ 2.30258509299;
     }
 }
