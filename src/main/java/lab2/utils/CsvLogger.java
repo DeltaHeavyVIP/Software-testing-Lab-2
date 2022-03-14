@@ -1,10 +1,10 @@
-package lab_2.utils;
+package lab2.utils;
 
-import com.opencsv.CSVWriter;
-import lab_2.AbstractFunction;
 import lombok.Data;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 @Data
 public class CsvLogger {
@@ -18,8 +18,8 @@ public class CsvLogger {
     }
 
     public void logger(double x, double y) {
-        try(PrintStream printStream = new PrintStream(new FileOutputStream(filePath, true))) {
-             printStream.print(String.format("%s, %s \n", x,y));
+        try (PrintStream printStream = new PrintStream(new FileOutputStream(filePath, true))) {
+            printStream.print(String.format("%s, %s \n", x, y));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

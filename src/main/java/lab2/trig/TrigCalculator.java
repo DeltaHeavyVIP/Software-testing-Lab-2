@@ -1,6 +1,6 @@
-package lab_2.trig;
+package lab2.trig;
 
-import lab_2.AbstractFunction;
+import lab2.AbstractFunction;
 
 public class TrigCalculator extends AbstractFunction {
     private final Sin sin;

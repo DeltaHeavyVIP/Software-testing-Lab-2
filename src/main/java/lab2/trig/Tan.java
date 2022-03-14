@@ -1,14 +1,15 @@
-package lab_2.trig;
+package lab2.trig;
 
 import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.POSITIVE_INFINITY;
 
-public class Csc extends TrigFunction {
-
+public class Tan extends TrigFunction {
     private final Sin sin;
+    private final Cos cos;
 
-    public Csc() {
+    public Tan() {
         this.sin = new Sin();
+        this.cos = new Cos();
     }
 
     @Override
@@ -16,13 +17,14 @@ public class Csc extends TrigFunction {
         x = checkX(x);
 
         double resultSin = sin.calculate(x);
-        double result = 1.0 / resultSin;
+        double resultCos = cos.calculate(x);
 
-        if (result == POSITIVE_INFINITY)
+        if (resultCos == 0.0 && resultSin > 0) {
             return POSITIVE_INFINITY;
-        else if (result == NEGATIVE_INFINITY)
+        } else if (resultCos == 0.0 && resultSin < 0) {
             return NEGATIVE_INFINITY;
+        }
 
-        return result;
+        return resultSin / resultCos;
     }
 }

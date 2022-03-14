@@ -2,8 +2,8 @@ package trig;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import lab_2.AbstractFunction;
-import lab_2.trig.*;
+import lab2.AbstractFunction;
+import lab2.trig.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

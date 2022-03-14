@@ -1,22 +1,22 @@
-package lab_2.trig;
+package lab2.trig;
 
 import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.POSITIVE_INFINITY;
 
-public class Sec extends TrigFunction {
+public class Csc extends TrigFunction {
 
-    private final Cos cos;
+    private final Sin sin;
 
-    public Sec() {
-        this.cos = new Cos();
+    public Csc() {
+        this.sin = new Sin();
     }
 
     @Override
     public Double calculate(Double x) {
         x = checkX(x);
 
-        double resultCos = cos.calculate(x);
-        double result = 1.0 / resultCos;
+        double resultSin = sin.calculate(x);
+        double result = 1.0 / resultSin;
 
         if (result == POSITIVE_INFINITY)
             return POSITIVE_INFINITY;

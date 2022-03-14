@@ -1,7 +1,7 @@
-package lab_2;
+package lab2;
 
-import lab_2.log.LogCalculator;
-import lab_2.trig.TrigCalculator;
+import lab2.log.LogCalculator;
+import lab2.trig.TrigCalculator;
 
 public class Calculator {
     private final LogCalculator logCalculator;

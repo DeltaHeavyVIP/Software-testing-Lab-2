@@ -1,15 +1,14 @@
 package log;
 
-import lab_2.log.Ln;
-import lab_2.log.Log10;
-import lab_2.log.Log3;
-import lab_2.log.Log5;
+import lab2.log.Ln;
+import lab2.log.Log10;
+import lab2.log.Log3;
+import lab2.log.Log5;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static java.lang.Math.PI;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Log calculator")

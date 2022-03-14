@@ -1,13 +1,14 @@
-package lab_2.trig;
+package lab2.trig;
 
 import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.POSITIVE_INFINITY;
 
-public class Tan extends TrigFunction {
+public class Cot extends TrigFunction {
+
     private final Sin sin;
     private final Cos cos;
 
-    public Tan() {
+    public Cot() {
         this.sin = new Sin();
         this.cos = new Cos();
     }
@@ -19,12 +20,12 @@ public class Tan extends TrigFunction {
         double resultSin = sin.calculate(x);
         double resultCos = cos.calculate(x);
 
-        if (resultCos == 0.0 && resultSin > 0) {
+        if (resultSin == 0.0 && resultCos > 0) {
             return POSITIVE_INFINITY;
-        } else if (resultCos == 0.0 && resultSin < 0) {
+        } else if (resultSin == 0.0 && resultCos < 0) {
             return NEGATIVE_INFINITY;
         }
 
-        return resultSin / resultCos;
+        return resultCos / resultSin;
     }
 }

@@ -1,6 +1,6 @@
-package lab_2.log;
+package lab2.log;
 
-import lab_2.AbstractFunction;
+import lab2.AbstractFunction;
 
 public abstract class LogFunction extends AbstractFunction {
     @Override

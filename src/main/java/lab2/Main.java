@@ -1,7 +1,7 @@
-package lab_2;
+package lab2;
 
-import lab_2.log.*;
-import lab_2.trig.*;
+import lab2.log.*;
+import lab2.trig.*;
 
 import static java.lang.Math.PI;
 

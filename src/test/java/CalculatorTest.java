@@ -1,7 +1,7 @@
 import com.opencsv.exceptions.CsvException;
-import lab_2.Calculator;
-import lab_2.log.*;
-import lab_2.trig.*;
+import lab2.Calculator;
+import lab2.log.*;
+import lab2.trig.*;
 import log.LogStubsTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.TestInstance;
@@ -11,7 +11,6 @@ import trig.TrigStubsTest;
 
 import java.io.IOException;
 
-import static java.lang.Math.PI;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("CalculatorTest")

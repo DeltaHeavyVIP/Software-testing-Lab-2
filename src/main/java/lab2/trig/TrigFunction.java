@@ -1,6 +1,6 @@
-package lab_2.trig;
+package lab2.trig;
 
-import lab_2.AbstractFunction;
+import lab2.AbstractFunction;
 
 import static java.lang.Math.PI;
 

@@ -1,4 +1,4 @@
-package lab_2.log;
+package lab2.log;
 
 public class Log3 extends LogFunction {
     public Log3(Ln ln) {

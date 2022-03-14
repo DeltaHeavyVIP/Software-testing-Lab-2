@@ -1,15 +1,13 @@
-package lab_2.trig;
+package lab2.trig;
 
 import static java.lang.Double.NEGATIVE_INFINITY;
 import static java.lang.Double.POSITIVE_INFINITY;
 
-public class Cot extends TrigFunction {
+public class Sec extends TrigFunction {
 
-    private final Sin sin;
     private final Cos cos;
 
-    public Cot() {
-        this.sin = new Sin();
+    public Sec() {
         this.cos = new Cos();
     }
 
@@ -17,15 +15,14 @@ public class Cot extends TrigFunction {
     public Double calculate(Double x) {
         x = checkX(x);
 
-        double resultSin = sin.calculate(x);
         double resultCos = cos.calculate(x);
+        double result = 1.0 / resultCos;
 
-        if (resultSin == 0.0 && resultCos > 0) {
+        if (result == POSITIVE_INFINITY)
             return POSITIVE_INFINITY;
-        } else if (resultSin == 0.0 && resultCos < 0) {
+        else if (result == NEGATIVE_INFINITY)
             return NEGATIVE_INFINITY;
-        }
 
-        return resultCos / resultSin;
+        return result;
     }
 }

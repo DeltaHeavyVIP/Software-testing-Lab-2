@@ -1,4 +1,4 @@
-package lab_2.trig;
+package lab2.trig;
 
 import static java.lang.Math.*;
 

@@ -1,9 +1,9 @@
-package lab_2;
+package lab2;
 
 import lombok.Data;
 
 import static java.lang.Double.*;
-import static java.lang.Math.PI;
+
 import java.util.HashMap;
 import java.util.Map;
 

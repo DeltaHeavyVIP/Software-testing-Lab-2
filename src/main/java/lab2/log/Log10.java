@@ -1,8 +1,8 @@
-package lab_2.log;
+package lab2.log;
 
-public class Log5 extends LogFunction{
+public class Log10 extends LogFunction{
     private final Ln ln;
-    public Log5(Ln ln) {
+    public Log10(Ln ln) {
         this.ln = ln;
     }
 
@@ -10,6 +10,6 @@ public class Log5 extends LogFunction{
     public Double calculate(Double x) {
         x = checkX(x);
 
-        return ln.calculate(x)/ 1.60943791243;
+        return ln.calculate(x)/ 2.30258509299;
     }
 }

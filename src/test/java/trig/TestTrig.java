@@ -1,9 +1,8 @@
 package trig;
 
-import lab_2.trig.*;
-import lab_2.utils.CsvLogger;
+import lab2.trig.*;
+import lab2.utils.CsvLogger;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

@@ -2,7 +2,7 @@ package log;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import lab_2.log.*;
+import lab2.log.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
