@@ -20,7 +20,6 @@ public class TestTrigLogger {
     private final Csc csc;
     private final TrigCalculator trigCalculator;
     private static CsvLogger csvLogger;
-    private final double accuracy = 0.1;
 
     TestTrigLogger() {
         this.sin = new Sin();

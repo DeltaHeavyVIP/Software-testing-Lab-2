@@ -2,6 +2,7 @@ package trig;
 
 import lab_2.trig.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -19,6 +20,7 @@ public class TestTrig {
     private final Cot cot;
     private final Sec sec;
     private final Csc csc;
+    private final TrigCalculator trigCalculator;
     private final double accuracy = 0.1;
 
 
@@ -29,6 +31,7 @@ public class TestTrig {
         this.cot = new Cot();
         this.sec = new Sec();
         this.csc = new Csc();
+        trigCalculator = new TrigCalculator(sin, cos, tan, cot, sec, csc);
     }
 
     @ParameterizedTest
@@ -109,5 +112,17 @@ public class TestTrig {
         }
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/inputTrig/funcData.csv")
+    @DisplayName("func(x) test")
+    void funcTest(Double divisible, Double divider, Double trueResult) {
+        try {
+            double x = divisible * Math.PI / divider;
+            double result = trigCalculator.calculate(x);
+            assertEquals(trueResult, result, 100);
+        } catch (ArithmeticException e) {
+            assertEquals("Х should be <=0", e.getMessage());
+        }
+    }
 
 }
