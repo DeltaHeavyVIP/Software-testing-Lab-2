@@ -1,13 +1,11 @@
 package trig;
 
 import lab_2.trig.*;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static java.lang.Math.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
