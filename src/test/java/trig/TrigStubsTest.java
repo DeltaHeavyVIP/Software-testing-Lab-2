@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class trigStubsTest {
+public class TrigStubsTest {
 
     private static Sin sin = mock(Sin.class);
     private static Cos cos = mock(Cos.class);
